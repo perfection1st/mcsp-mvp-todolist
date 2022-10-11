@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+html { 
+  background: url(../images/body-bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Kalam', cursive;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: flex-start;
+}
+div#container {
+  min-width:500px;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+header {
+  padding:20px;
+  text-align:center;
+}
+header h1 {
+  margin:15px 0 25px 0;
+  font-size:70px;
+  color:#eee;
+  text-shadow: 5px 1px #14210B;
+}
+form#add-todo-form {
+  background: rgba(72, 120, 50, 0.20);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.7px);
+  -webkit-backdrop-filter: blur(9.7px);
+  border: 1px solid rgba(72, 120, 50, 0.10);
+  padding:20px;
+}
+input#add-todo-input {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgb(0, 0, 0, 0.25); 
+  border-radius: 4px;
+  font-size: 25px;
+  color: rgb(247, 248, 248);
+  appearance: none;
+  transition: border 0.15s ease 0s;
+  line-height:1;
+  font-family: 'Kalam', cursive;
+  text-shadow: 1px 1px #14210B;
+  padding:5px 5px 8px 5px;
+}
+input#add-todo-input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(0, 0, 0, 0.50); 
+}
+input#add-todo-submit {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: rgba(238, 238, 238, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.20);
+  border: 1px solid rgba(238, 238, 238, 0.10);
+  color:#111;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding:20px 10px 15px 10px;
+  font-size: 18px;
+  line-height: 1;
+  vertical-align:middle;
+  transition: transform 200ms, background 200ms;
+  font-family: 'Kalam', cursive;
+  text-shadow: 1px 1px #14210B;
+}
+input#add-todo-submit:hover {
+  background: rgba(238, 238, 238, 0.10);
+}
+section#todo {
+  width:100%;
+  padding:25px 0 25px 0;
+  margin-top:25px;
+  background: rgba(72, 120, 50, 0.20);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.7px);
+  -webkit-backdrop-filter: blur(9.7px);
+  border: 1px solid rgba(72, 120, 50, 0.10);
+}
+section#todo ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  padding:0 20px 0 20px;
+}
+section#todo ul li {
+  padding-bottom:10px;
+  font-size:25px;
+  margin-bottom:10px;
+  border-radius:10px;
+  padding:10px;
+  background: rgba(238, 238, 238, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.20);
+  border: 1px solid rgba(238, 238, 238, 0.10);
+  color:#111;
+}
+section#todo ul li:nth-child(odd) {
+  background: rgba(238, 238, 238, 0.20);
+}
