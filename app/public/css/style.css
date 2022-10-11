@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+.hidden {
+  display:none;
+}
 html { 
   background: url(../images/body-bg.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -80,6 +83,15 @@ input#add-todo-submit {
 }
 input#add-todo-submit:hover {
   background: rgba(238, 238, 238, 0.10);
+}
+.center {
+  display:flex;
+  align-content:center;
+  justify-content:center;
+}
+#todo-spinner {
+  margin:0 auto;
+  padding:25px;
 }
 section#todo {
   width:100%;

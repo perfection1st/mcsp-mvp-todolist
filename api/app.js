@@ -18,7 +18,7 @@ client
   .then(() => console.log('Connected to Database'))
   .catch(err => console.error('Database connection failed:', err));
 
-app.route('/')
+app.route('/api')
 .get((req, res) => {
       client.query('SELECT * FROM todo')
       .then (result => {
