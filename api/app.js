@@ -10,10 +10,8 @@ const PORT = 3001;
 
 
 const client = new Client({
-  connectionString: process.env.PGCONNECT_DEV
+  connectionString: process.env.PGCONNECT
 });
-
-console.log(client.connectionParameters);
 
 client
   .connect()
