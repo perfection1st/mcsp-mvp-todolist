@@ -1,3 +1,7 @@
+DROP DATABASE todolist;
+
+CREATE DATABASE IF NOT EXISTS todolist;
+
 DROP TABLE "todo";
 
 CREATE TABLE IF NOT EXISTS "todo" (

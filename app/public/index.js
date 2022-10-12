@@ -21,13 +21,15 @@ function loading(onOrOff) {
 };
 }
 
+// GET TASKS
+
 function getTodoItems() {
   loading('on');
 fetch(`${API}`)
   .then(res => res.json())
   .then(data => {
+    console.log(data)
     data.forEach(todo => {
-      console.log(todo.list_item);
       let task = document.createElement('li');
       task.innerHTML = `${todo.list_item}`;
       todoList.appendChild(task);
@@ -37,10 +39,32 @@ fetch(`${API}`)
 .catch(error => {
   console.log(error);
 });
-  
 }
 
+const addTodoInput = document.getElementById('add-todo-input');
+const addTodoSubmit = document.getElementById('add-todo-submit');
 
-window.addEventListener('load', (event) => {
-  getTodoItems();
+// ADD TASK
+addTodoSubmit.addEventListener('click', (event) => {
+  
+  event.preventDefault();
+  let task = addTodoInput.value;
+  fetch(`${API}`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body:JSON.stringify({ list_item: task })
+  })
+  .then(res => res.json())
+  .then(data => {
+    res.status(200);
+  })
+  .catch(err => {
+    console.log(err);
+  })
 });
+
+
+
+
+
+getTodoItems();
