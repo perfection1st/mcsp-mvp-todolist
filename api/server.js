@@ -36,7 +36,8 @@ app.route('/api')
   .catch(err => {
       console.error(err);
   }) 
-})
+});
+/*
 .put((req, res) => {
   client.query(`UPDATE todo SET list_item = $1 WHERE id = $2`, [req.body.list_item, req.body.id])
   .then(result => {
@@ -46,6 +47,7 @@ app.route('/api')
       console.error(err);
   }) 
 });
+*/
 
 app.listen(PORT, (req, res) => {
   console.log('Server started, listening on port', PORT);
