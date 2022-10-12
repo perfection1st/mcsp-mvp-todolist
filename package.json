@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app/app.js",
-    "start": "node app/app.js"
+    "dev": "nodemon -r dotenv/config app/server.js",
+    "start": "node app/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }

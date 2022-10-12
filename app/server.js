@@ -1,7 +1,10 @@
 'use strict';
+const PORT = process.env.PORT;
 const express = require('express');
 const app = express();
-const PORT = 3000;
+
+
+console.log(PORT);
 
 app.use(express.static('app/public'));
 
