@@ -1,5 +1,5 @@
 'use strict';
-const API = 'http://localhost:3001/api';
+const API = process.env.TODOAPI || 'http://localhost:3001/api';
 const todoContainer = document.getElementById('todo');
 const todoList = document.createElement('ul');
 todoList.id = 'todo-items';
