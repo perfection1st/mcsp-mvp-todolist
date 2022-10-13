@@ -1,8 +1,11 @@
 'use strict';
+const API = 'http://localhost:3001/api';
 const todoContainer = document.getElementById('todo');
 const todoList = document.createElement('ul');
 todoList.id = 'todo-items';
 todoContainer.appendChild(todoList);
+
+
 
 // Create loading spinner
 const spinner = document.getElementById('todo-spinner');

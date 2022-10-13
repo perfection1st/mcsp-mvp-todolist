@@ -1,13 +1,10 @@
 'use strict';
-const API = process.env.TODOAPI || 'http://localhost:3001/api';
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
 
-console.log('API:', API, 'PORT:', PORT);
-
-app.use(express.static('app/public'));
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
