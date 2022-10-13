@@ -1,5 +1,5 @@
 'use strict';
-const API = 'http://localhost:3001/api';
+const API = 'https://mcsp-mvp-todolist-api.onrender.com/api';
 const todoContainer = document.getElementById('todo');
 const todoList = document.createElement('ul');
 todoList.id = 'todo-items';
