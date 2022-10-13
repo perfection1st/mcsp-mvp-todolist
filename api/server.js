@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 const pg = require('pg');
 const { Client } = pg;
